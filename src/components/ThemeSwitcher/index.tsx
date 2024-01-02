@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./style.scss";
 import { DarkMode, LightMode } from "@mui/icons-material";
 
-const ThemeSwicther = () => {
+const ThemeSwicther: React.FC = () => {
   const [isDark, setIsDark] = useState<boolean>(false);
   const ThemeIcon = isDark ? <LightMode /> : <DarkMode />;
   const ThemeText = isDark ? "Light" : "Dark";
