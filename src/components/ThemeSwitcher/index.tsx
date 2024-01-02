@@ -1,17 +1,22 @@
-import React, { useState } from 'react'
-import './style.scss'
-import { DarkMode, LightMode } from '@mui/icons-material'
+import React, { useEffect, useState } from "react";
+import "./style.scss";
+import { DarkMode, LightMode } from "@mui/icons-material";
 
 const ThemeSwicther = () => {
-  const [isDark, setIsDark] = useState(false)
-  const ThemeIcon = isDark ? <LightMode/> : <DarkMode/>
-  const ThemeText = isDark ? "Light" : "Dark"
-  return (
-    <div className='switcher' onClick={() => {}}>
-        <span>{ThemeText}</span>
-        {ThemeIcon}
-    </div>
-  )
-}
+  const [isDark, setIsDark] = useState<boolean>(false);
+  const ThemeIcon = isDark ? <LightMode /> : <DarkMode />;
+  const ThemeText = isDark ? "Light" : "Dark";
 
-export default ThemeSwicther
+  useEffect(() => {
+    document.body.setAttribute("data-theme", isDark ? "dark" : "light");
+  }, [isDark]);
+
+  return (
+    <div className="switcher" onClick={() => setIsDark(!isDark)}>
+      <span>{ThemeText}</span>
+      <i>{ThemeIcon}</i>
+    </div>
+  );
+};
+
+export default ThemeSwicther;

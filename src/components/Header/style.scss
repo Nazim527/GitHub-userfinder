@@ -1,11 +1,9 @@
-:global {
   body[data-theme="light"] {
     --header-color: var(--gray-300);
   }
   body[data-theme="dark"] {
     --header-color: var(--white);
   }
-}
 
 .header {
     margin: 35px;

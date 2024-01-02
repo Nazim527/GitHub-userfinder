@@ -1,0 +1,35 @@
+body[data-theme="light"] {
+    --switcher-color: var(--gray-100);
+    --switcher-color-hover: var(--gray-300);
+}
+body[data-theme="dark"] {
+    --switcher-color: var(--white);
+    --switcher-color-hover: var(--gray-300);
+}
+
+.switcher {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+
+    span {
+        color: var(--switcher-color);
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+    }
+
+    i {
+        display: flex;
+        align-items: center;
+        color: var(--switcher-color);
+    }
+
+    &:hover {
+        span,i {
+            color: var(--switcher-color-hover);
+        }
+    }
+
+}
