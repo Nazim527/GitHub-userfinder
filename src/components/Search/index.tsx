@@ -9,8 +9,12 @@ interface ISearchProps {
   onSubmit?: (text:string) => void
 }
 const Search: React.FC<ISearchProps> = ({hasError,onSubmit}) => {
+  const handleSubmit = () => {
+
+  }
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className="search">
         <label htmlFor="search" className='label'>
           <SearchIcon className='search_icon'/>

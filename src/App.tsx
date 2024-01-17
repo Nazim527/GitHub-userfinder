@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { defaultUser } from './types'
 import { IGitHubUsers } from './types/user'
-import { Container, Header, Search } from './components'
+import { Container, Header, Search, UserCard } from './components'
 
 function App() {
   const [user, setuser] = useState<IGitHubUsers | null>(defaultUser)
@@ -13,6 +13,7 @@ function App() {
       <Container> 
         <Header/>
         <Search/>
+        <UserCard/>
       </Container>
     </>
   )
