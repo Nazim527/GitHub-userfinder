@@ -1,0 +1,10 @@
+body[data-theme="light"] {
+    --ucard-bg: var(--white);
+    --bio-color: var(--gray-200);
+    --ucard-shadow: var(--shadow);
+}
+body[data-theme="dark"] {
+    --ucard-bg: var(--gray-400);
+    --bio-color: var(--gray-200);
+    --ucard-shadow: unset;
+}
