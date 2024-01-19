@@ -13,7 +13,7 @@ const ThemeSwicther: React.FC = () => {
 
   return (
     <div className="switcher" onClick={() => setIsDark(!isDark)}>
-      <span>{ThemeText}</span>
+      <span>{ThemeText}</span> 
       <i>{ThemeIcon}</i>
     </div>
   );

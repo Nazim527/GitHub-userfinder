@@ -13,7 +13,7 @@ function App() {
       <Container> 
         <Header/>
         <Search/>
-        <UserCard/>
+        {user && <UserCard {...user}/>}
       </Container>
     </>
   )
