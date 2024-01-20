@@ -1,0 +1,20 @@
+body[data-theme="light"] {
+    --info-color: var(--gray-300);
+}
+body[data-theme="dark"] {
+    --info-color: var(--white);
+}
+
+.infoitem {
+    color: var(--info-color);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+
+    .MuiSvgIcon-root {
+        color: var(--info-color);
+        margin-right: 1rem;
+        width: 25px;
+    }
+}
